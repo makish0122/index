@@ -43,6 +43,11 @@
           margin: 0 auto;
         }
 
+        #form {
+            display: none;
+            text-align:center;
+        }
+
         input { 
             width: 90%;
             outline: none;
@@ -94,8 +99,23 @@
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
+       let tg=window.Telegram.WebApp;
+        let buy = document.getElementById("but")'
+        let order = document.getElementById("Order");
 
+        buy.addEventListener("click", () => {
+            document.getElementByID("main").style.display="none"
+            document.getElementByID("form").style.display="block" 
+            document.getElementByID("user_name").value = tg.initdataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name
+
+            
+
+            
+        });
+
+        order.addEventListener("click", () => {
+            tg.close;
     </script>
-    </script>
+ 
 </body>
 </html>
